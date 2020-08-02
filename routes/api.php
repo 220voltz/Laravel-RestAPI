@@ -22,4 +22,4 @@ Route::get('country','Country\CountryController@country');
 Route::get('country/{id}','Country\CountryController@countryByID');
 Route::post('country','Country\CountryController@countrySave');
 Route::put('country/{id}','Country\CountryController@countryUpdate');
-Route::delete('country/{country}','Country\CountryController@countryDelete');
+Route::delete('country/{id}','Country\CountryController@countryDelete');
