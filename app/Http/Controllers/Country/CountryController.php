@@ -29,9 +29,9 @@ class CountryController extends Controller
     public function countrySave(Request $request){
         $rules = [
             'name' => 'required|min:3',
-            'iso' => 'required|min:2|max:2|unique'
+            'iso' => 'required|unique|min:2|max:2'
         ];
-        $validator = Validator::make($request->all(),$rules);
+        $validator = Validator::make($request->all(),$rules);        
         if($validator->fails()){
             return response()->json($validator->errors(),400);
         }

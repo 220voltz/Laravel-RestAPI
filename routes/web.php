@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +22,6 @@ Route::get('/', function () {
 Route::get('/testPage', function () {
     echo "<h3>Hi there! Thank you for visiting our site.</h3> This page is being tested by our developers.";
 });
+
+Route::get('/home', 'HomeController@index')->name('home');
+
